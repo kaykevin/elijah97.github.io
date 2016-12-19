@@ -1,322 +1,223 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Academia</title>
-    <link rel="icon" href="http://academia.rw/web/images/logo.png">
-    <link href="http://academia.rw/web/css/bootstrap.css" rel="stylesheet">
-    <link href="http://academia.rw/web/css/academia.css" rel="stylesheet">
-    <link href="http://academia.rw/web/css/animate.css" rel="stylesheet">
-    <link href="http://academia.rw/web/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Exo+2:200,500,900" rel="stylesheet">
-</head>
-<body id="page-top" class="landing" ng-app="academia" ng-controller="homePage" style="width:100%; overflow-x:hidden">
-<div class="se-pre-con"></div>
-    <nav class="navbar navbar-default" style="margin-bottom: 0px; z-index: 10"><!-- navbar -->
-      <div class="container-fluid">
-        <div class="row">
-            <div class="navbar-header col-md-5">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-2">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-                <a class="navbar-brand col-md-6 col-xs-6" href="#"  hreflang="en">
-              <img src="http://academia.rw/web/images/logo.png" width="50px" class="col-md-4 col-xs-6">
-              <p class="col-md-7">Academia</p>
-              </a>
-            </div>
-        
-            <div class="collapse navbar-collapse col-md-7 no-padding pull-right" id="navbar-collapse-2">
-              <ul class="nav navbar-nav navbar-right pull-right">
-                <li>
-                    <form class="navbar-form navbar-right form-inline no-padding" role="form">
-                      <div class="form-group">
-                        <label class="sr-only" for="Email">Email</label>
-                        <input ng-model="studentLogin.email" type="email" class="form-control" id="" placeholder="Email" autofocus required />
-                      </div>
-                      <div class="form-group">
-                        <label class="sr-only" for="Password">Password</label>
-                        <input ng-model="studentLogin.password" type="password" class="form-control" id="" placeholder="Password" required />
-                      </div>
-                      <button id="sloginSubmit" ng-click="sLogin(studentLogin);" type="button" class="btn asstudent">
-                        <img src="http://academia.rw/web/images/loader.gif" width="20px" height="20px" style="display:none; float:left" id="sloginSpinner" class="spinnerGIF">
-                        Login
-                      </button>
-                      <a href="" style="background:#eee" type="submit" class="btn asteacher" data-toggle="modal" data-target="#login-modal">Login as Teacher</a>
+<!DOCTYPE HTML>
+<!--
+	Prologue by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Portolio :.: Elie K. Gash</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	</head>
+	<body>
 
-                    </form>
-                </li>
-                <li>
-                  
-                </li>
-              </ul>
+		<!-- Header -->
+			<div id="header">
 
-            </div>
-            <div class="col-md-12 col-xs-12" style="padding:0 20px;">
-                <p class="notifsl" style="color: #80888d; font-size:13px;text-align:right; display: none !important;">{{failsl}}
-                <a href="#" data-toggle="modal" data-target="#forgojye" ng-click="forgojye();"><span  style="color: #3d8789; font-size:13px;font-weight:400"> Forgot Password?</span></a></p>
+				<div class="top">
 
+					<!-- Logo -->
+						<div id="logo">
+							<span class="image avatar48"><img src="images/a.jpg" alt="" /></span>
+							<h1 id="title">Elie K. Gash</h1>
+							<p>Full Stack web Developer<br><btn style="padding-right: 50px;">&</btn><br>Android Developer</p>
+						</div>
 
-            </div>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container -->
-    </nav><!-- /.navbar -->
+					<!-- Nav -->
+						<nav id="nav">
+							<!--
 
-    <div class="container-fluid" style="padding:0">
-  
-        <div class="row"  style="padding:0 16px; margin-top:0px">
-            <div class="col-sm-9 md-only" id="carousel-bounding-box">
-                <div class="carousel slide  carousel-fade" style="background:#777; height:450px; margin-bottom:16px"  data-ride="carousel" data-interval="5000" id="myCarousel" duration="2000">
-                    <!-- Carousel items -->
-                    <div class="carousel-inner">
-                        <div class="active item" data-slide-number="0" style="background-image:url(http://academia.rw/web/images/backg.jpg); background-size: cover; height:450px; ">
-                            
-                        </div>
+								Prologue's nav expects links in one of two formats:
 
-                       <!--  <div class="item" data-slide-number="1"  style="background-image:url(http://academia.rw/web/images/b.JPG); background-size: cover; height:450px; ">
-                        </div>
+								1. Hash link (scrolls to a different section within the page)
 
-                        <div class="item" data-slide-number="2"  style="background-image:url(http://academia.rw/web/images/c.JPG); background-size: cover; height:450px; ">
-                        </div>
+								   <li><a href="#foobar" id="foobar-link" class="icon fa-whatever-icon-you-want skel-layers-ignoreHref"><span class="label">Foobar</span></a></li>
 
-                        <div class="item" data-slide-number="3"  style="background-image:url(http://academia.rw/web/images/a.JPG); background-size: cover; height:450px; ">
-                        </div>
+								2. Standard link (sends the user to another page/site)
 
-                        <div class="item" data-slide-number="4"  style="background-image:url(http://academia.rw/web/images/b.JPG); background-size: cover; height:450px; ">
-                        </div>
+								   <li><a href="http://foobar.tld" id="foobar-link" class="icon fa-whatever-icon-you-want"><span class="label">Foobar</span></a></li>
 
-                        <div class="item" data-slide-number="5"  style="background-image:url(http://academia.rw/web/images/c.JPG); background-size: cover; height:450px; ">
-                        </div> -->
-                    </div><!-- Carousel nav -->
-                
-                </div>
-            </div>
+							-->
+							<ul>
+								<li><a href="#top" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Intro</span></a></li>
+								<li><a href="#portfolio" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Portfolio</span></a></li>
+								<li><a href="#about" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-user">About Me</span></a></li>
+								<li><a href="#contact" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-envelope">Contact</span></a></li>
+							</ul>
+						</nav>
 
-            <div class="col-sm-3" id="carousel-text" >
-                <form role="form" id="login" class="col-md-12" style="background:#fff; box-shadow: 1px 1px 5px #888; padding: 16px; height:450px; margin-bottom:16px">
-                  <center class="row">
-                    <p style="font-size:18px; color:#3d8789; ">Create account for Free!</p>
-                    <div class="col-md-12 no-padding">
-                        <div class="form-group">
-                            <input type="text" ng-model="studentSignup.names" class="form-control" name="email" autocomplete="off" id="FullName" placeholder="Full name" style="background:#fff; border: 1px solid #bbb; border-radius: 0px;  ">
-                        </div>
-                    </div>
-                    <div class="col-md-12 no-padding">
-                        <div class="form-group">
-                            <select class="form-control" ng-model="studentSignup.school" class="form-control" name="email" style="background:#fff; border: 1px solid #bbb; border-radius: 0px;" ng-options="option as option.names for option in allSchools track by option.id">
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-md-12 no-padding">
-                        <div class="form-group">
-                            <input type="text" ng-model="studentSignup.student_id" class="form-control" name="Name" autocomplete="off" id="Name" placeholder="Id Number" style="background:#fff; border: 1px solid #bbb; border-radius: 0px;  ">
-                        </div>
-                    </div>
-                    <div class="col-md-12 no-padding">
-                        <div class="form-group">
-                            <input type="text" ng-model="studentSignup.email" class="form-control" name="email" autocomplete="off" id="Last Name" placeholder="Email" style="background:#fff; border: 1px solid #bbb; border-radius: 0px;  ">
-                        </div>
-                    </div>
-                    <div class="col-md-12 no-padding">
-                        <div class="form-group">
-                            <input type="password" ng-model="studentSignup.password" class="form-control" name="Name" autocomplete="off" id="Name" placeholder="Password" style="background:#fff; border: 1px solid #bbb; border-radius: 0px;  ">
-                        </div>
-                    </div>
-                    <div class="col-md-12 no-padding">
-                        <div class="form-group">
-                            <input type="password" ng-model="studentSignup.repass" class="form-control" name="Name" autocomplete="off" id="Name" placeholder="Re-Password" style="background:#fff; border: 1px solid #bbb; border-radius: 0px;  ">
-                        </div>
-                    </div>
-                    <div class="col-md-12 no-padding">
-                        <button id="ssignupSubmit" ng-click="sSignup(studentSignup);" type="button" style="color:#f9f9f9; background:#3d8789; border-radius:0px; ;width:50%"  class="btn btn-md">
-                            <img src="http://academia.rw/web/images/loader.gif" width="20px" height="20px" style="display:none; float:left" id="ssignupSpinner" class="spinnerGIF">
-                            Register
-                        </button>
-                        <p class="notifss" style="color: #2D5E5E !important;">{{failss}}</p>
-                    </div>
-                    
-                  </center>
-                </form>
-            </div>            
-        </div>
+				</div>
 
+				<div class="bottom">
 
-       <div class="row">
-           <div class="col-md-12" style="background: #3d8789; margin:0px ">
-            <div class="col-md-6" style="padding:100px 50px">
-                <p style="font-size:18px; color:#eee;text-align:center"><span style="font-size:26px; color:#fff;font-weight:400">What is Academia?</span><br><br>Academia is a web-based system for assignments submission and document sharing, it aims to provide an online
+					<!-- Social Icons -->
+						<ul class="icons">
+							<li><a href="https://www.twitter.com/elie.gash" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="https://ww.facebook.com/elie.gash" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="https://www.github.com/eliegash97" class="icon fa-github"><span class="label">Github</span></a></li>
+							<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+							<li><a href="mail@elie.gash42@gmail.com" class="icon fa-envelope"><span class="label">Email</span></a></li>
 
-submission and sharing mechanism, improving the traditional and physical methods of both submission and sharing.</p>
-            </div>
-            <div class="col-md-6" style="padding:50px">
-                <img src="http://academia.rw/web/images/Device.png" width="100%">
-            </div>
-           </div>
-       
-    </div>
-    
-    
-            <div class="col-md-12"><p style="font-size:32px; text-align:center; color:#80888d; margin-top: 32px">Why Academia?</p></div>
-    
-    <!--<div class="row">
-           <div class="col-md-12" style="background: #3d8789 ">
-            <div class="col-md-6" style="padding:50px">
-                <img src="http://academia.rw/web/images/Device.png" width="100%">
-            </div>
-            <div class="col-md-6" style="padding:100px 50px">
-                <p style="font-size:18px; color:#eee;text-align:center"><span style="font-size:26px; color:#fff;font-weight:400">What is Academia?</span><br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
-            </div>
-           </div>
-       
-    </div>-->
-    
-    
-    
+						</ul>
 
-        <div class="row">
-            <div class="col-md-12" style="padding: 25px 16px">
-                <div class="col-md-4" style="padding:25px">
-                    <img src="http://academia.rw/web/images/sp.png" width="100%" style="float:right">
-                </div>
-                <div class="col-md-8" style="padding:80px 100px 0px 25px; box-shadox:5px 0 5px #888">
-                    <p style="font-size:18px; color:#80888d;"><span style="font-size:22px; color:#3d8789;font-weight:400">Made with User Experience</span><br><br>Designed by expert in-house designers in accordance with the suggestions made by experienced
-educational administrators and students, the Academia is truly simple and user friendly. The Academia 
-has been developed in the consideration of providing accessibility to the whole administration officials in 
-an educational organization.</p>
-                </div>
-            </div>
-            <div class="col-md-12"  style="padding: 25px 16px">
-                <div class="col-md-4" style="padding:25px">
-                    <img src="http://academia.rw/web/images/sp.png" width="100%">
-                </div>
-                <div class="col-md-8" style="padding:60px 100px 0px 25px">
-                    <p style="font-size:18px; color:#80888d;"><span style="font-size:22px; color:#3d8789;font-weight:400;">simplified</span><br><br>Our guaranteed and stable platform helps administrators/teachers to access, modify and submit data
+				</div>
 
-from anywhere at any time without interruptions. Features of the Submission System can be segregate 
+			</div>
 
-into categories based on 3 different types of users of the system: Students, Academic Staff and 
+		<!-- Main -->
+			<div id="main">
 
-Administrator. Each of the users will interact with the system in different aspect and different level.</p>
-                </div>
-            </div>
-            <div class="col-md-12" style="padding: 25px 16px">
-                <div class="col-md-4" style="padding:25px">
-                     <img src="http://academia.rw/web/images/sp.png" width="100%">
-                </div>
-                <div class="col-md-8" style="padding:90px 100px 0px 25px">
-                    <p style="font-size:18px; color:#80888d;"><span style="font-size:22px; color:#3d8789;font-weight:400">The future is now</span><br><br>We will be always bound to be reliable and committed in contributing towards the future of academic
-management. With the refined content and design, we keep up our standards, and with updated security 
-protocols we ensure confidentiality of our client data.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid" style="background:#fff; box-shadow: 1px 1px 3px #888; padding:16px 50px">        
-        <div class="row-">
-            <div class="col-md-12">
-                <p style="font-size:22px; color:#2d5e5e; text-align:center; padding:8px">Schools we are working with</p>
-                <div class="col-md-2 col-md-offset-5" style="padding:16px">
-                    <img src="http://academia.rw/web/images/AUCA.jpg" width="100%">
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid" style="background: #3d8789">
-        <div class="row" style="padding:50px">
-            <center class="col-md-6 col-md-offset-3">
-                <p  style="font-size:22px; color:#fff; text-align:center; padding:0px 0px 25px 0px">Let's Talk</p>
-               <form class="contform">
-                    <div class="col-md-6 controls">
-                        <input id="name" name="name" type="text" class="span3 col-md-12" placeholder="NAME" ng-model="contact.names"> 
-                    </div>
-                    <div class="col-md-6 controls">
-                        <input id="email" name="email" type="email" class="span3 col-md-12" placeholder="EMAIL" ng-model="contact.email">
-                    </div>
-                    <center class="col-md-12 controls">
-                        <textarea id="message" name="message" class="span6 col-md-12" placeholder="MESSAGE" rows="5" ng-model="contact.message"></textarea>
-                        <button id="contactSubmit" type="submit" class="btn contbtn" style="background:#2d5e5e" ng-click="contactUs(contact)">
-                            <img src="http://academia.rw/web/images/loader.gif" width="20px" height="20px" style="display:none; float:left" id="contactSpinner" class="spinnerGIF">
-                            SUBMIT</button>
-                    </center>
-               </form>
-                <p style="color: #fff!important;" class="notifcont">{{failcont}}</p>
-            </center>
-        </div>
-    </div>
+				<!-- Intro -->
+					<section id="top" class="one dark cover">
+						<div class="container">
 
-    <div class="container-fluid" style="padding:16px; background:#80888d">
-        <div class="row" >
-        <div class="col-md-6">
+							<header>
+								<h2 class="alt">Hi! I'm <strong>Elie Gashagaza</strong>, <br/> a full stack web & android developer and Businessman
+								</a>.</h2>
+							<q>"Everything should be made as simple as possible, but not simpler".</q>~ Albert Einstein<br/>
+								<q>"Succes is the intelligent use of mistakes".</q> 
+							</header>
 
-            </div>
-            <div class="col-md-6 landfooter">
-                <p style="color:#fff; text-align:right; margin-bottom: 0px; ">Developed by <a href="/awesomity"><span class="awesomity" >AWESOMITY</span></a> lab</p>
-            </div>
-        </div>
-    </div>
-<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-                        <div class="modal-dialog">
-                            <div class="loginmodal-container" style="border-radius: 0px;">
-                                <h1>Login to Your Teacher Account</h1><br>
-                              <form>
-                                <input ng-model="teacherLogin.email" class="loginteacher" type="email" name="email" placeholder="Email">
-                                <input ng-model="teacherLogin.password" class="loginteacher" type="password" name="pass" placeholder="Password">
-                                <button id="tloginSubmit" ng-click="tLogin(teacherLogin);" class="btn" style="width:100%; background:#2D5E5E; opacity: 100%; color:#eee; border-radius: 0px " name="login" class="login loginmodal-submit" type="button">
-                                  <img src="http://academia.rw/web/images/loader.gif" width="20px" height="20px" style="display:none; float:left" id="tloginSpinner" class="spinnerGIF">
-                                  Login
-                                </button>
-                              </form>
-                                
-                              
-                             <p style="color: #2D5E5E !important;">{{failtl}}</p> 
-                            </div>
-                        </div>
-                      </div>
-    <div class="modal fade" id="forgojye" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-                <div class="modal-dialog">
-                    <div class="loginmodal-container" style="border-radius: 0px;">
-                        <h1>Recover your Password</h1><br>
-                      <form>
-                        <input class="loginteacher" type="email" name="user" placeholder="Email" ng-model="forgoemail">
-                        <button id="forgoSubmit" ng-click="forgoLogin(forgoemail);" class="btn" style="width:100%; background:#2D5E5E; opacity: 100%; color:#eee; border-radius: 0px " name="login" class="login loginmodal-submit" type="button">
-                          <img src="http://academia.rw/web/images/loader.gif" width="20px" height="20px" style="display:none; float:left" id="forgoSpinner" class="spinnerGIF">
-                          OK
-                        </button>
-                      </form>
-                      <p style="color: #80888d!important;" class="notiforgo">{{failforgo}}</p>
-                    </div>
-                </div>
-              </div>
-    
-<script src="http://academia.rw/web/js/jquery.js"></script>
-<script src="http://academia.rw/web/js/bootstrap.js"></script>
-<script src="http://academia.rw/web/js/wow.min.js"></script>
-<script src="http://academia.rw/web/js/angular.min.js"></script>
-<script src="http://academia.rw/web/js/services.js"></script>
-<script src="http://academia.rw/web/js/app.js"></script>
-<script>
-      jQuery(document).ready(function($) {
-        
-        $('#myCarousel').carousel({
-                interval: 5000
-        });
- 
-        $('#carousel-text').html($('#slide-content-0').html());
- 
-        //Handles the carousel thumbnails
-        $('[id^=carousel-selector-]').click( function(){
-                var id_selector = $(this).attr("id");
-                var id = id_selector.substr(id_selector.length -1);
-                var id = parseInt(id);
-                $('#myCarousel').carousel(id);
-        });
-});
-</script>
-</body>
+							<footer>
+								<a href="#portfolio" class="button scrolly">Let's start</a>
+							</footer>
+
+						</div>
+					</section>
+
+				<!-- Portfolio -->
+					<section id="portfolio" class="two">
+						<div class="container">
+
+							<header>
+								<h2>Portfolio</h2>
+							</header>
+
+							<p>Here are some of my work. They are other works which can be published here, means they are confidential.
+							Here are little works compared to what are coming next.
+							</p>
+
+							<div class="row">
+								<div class="4u 12u$(mobile)">
+									<article class="item">
+										<a href="https://www.gtradelaw.com" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
+										<header>
+											<h3>Global Trade Law</h3>
+										</header>
+									</article>
+									<article class="item">
+										<a href="https://www.trattoria.com" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
+										<header>
+											<h3>Trattoria Restaurent</h3>
+										</header>
+									</article>
+								</div>
+								<div class="4u 12u$(mobile)">
+									<article class="item">
+										<a href="https://www.gtradelaw.com" class="image fit"><img src="images/pic04.jpg" alt="" /></a>
+										<header>
+											<h3>Trattoria Restaurent</h3>
+										</header>
+									</article>
+									<article class="item">
+										<a href="https://www.gtradelaw.com" class="image fit"><img src="images/pic05.jpg" alt="" /></a>
+										<header>
+											<h3>Trattoria Restaurent</h3>
+										</header>
+									</article>
+								</div>
+								<div class="4u$ 12u$(mobile)">
+									<article class="item">
+										<a href="https://www.gtradelaw.com" class="image fit"><img src="images/pic06.jpg" alt="" /></a>
+										<header>
+											<h3>Trattoria Restaurent</h3>
+										</header>
+									</article>
+									<article class="item">
+										<a href="https://www.gtradelaw.com" class="image fit"><img src="images/pic07.jpg" alt="" /></a>
+										<header>
+											<h3>Trattoria Restaurent</h3>
+										</header>
+									</article>
+								</div>
+							</div>
+
+						</div>
+					</section>
+
+				<!-- About Me -->
+					<section id="about" class="three">
+						<div class="container">
+
+							<header>
+								<h2>About Me</h2>
+							</header>
+
+							<a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
+
+							<p>I'm a guy who is passionate about IT and Business. I always dream how IT can develop world. Technology for all,
+							coding for all. I love reading, thinking, working and coffee.<br>
+							Talent is for certain people, it's birth gift while Hardworking is attained, anyone can be a hardworker, it doesn't choose, you just choose it. That's why i'm a hardworker, i chose it that's why i prefer it.
+							</p>
+
+							<footer>
+								<a href="cv/cv.docx" class="button">Download Cv</a>
+							</footer>
+
+						</div>
+					</section>
+
+				<!-- Contact -->
+					<section id="contact" class="four">
+						<div class="container">
+
+							<header>
+								<h2>Contact</h2>
+							</header>
+
+							<p>Contact me, so that in know how i can help or if there is something i can do for you. <br> Feel free to ask anything related to what i do. I also attached my links to social medias, <br> please click one of those to contact me.</p>
+
+							<form method="post" action="#">
+								<div class="row">
+									<div class="6u 12u$(mobile)"><input type="text" name="name" placeholder="Name" /></div>
+									<div class="6u$ 12u$(mobile)"><input type="text" name="email" placeholder="Email" /></div>
+									<div class="12u$">
+										<textarea name="message" placeholder="Message"></textarea>
+									</div>
+									<div class="12u$">
+										<input type="submit" value="Send Message" />
+									</div>
+								</div>
+							</form>
+
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<div id="footer">
+
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>&copy; Elie Gash. All rights reserved.</li><li>Design: <a href="http://hive.rw">InTheHive Ltd.</a></li>
+					</ul>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollzer.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
 </html>
